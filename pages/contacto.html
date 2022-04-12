@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300;1,400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet"/>
+    <title>Contacto</title>
+</head>
+
+<body>
+    
+    
+    <main>
+        <a id="top"></a>
+        <div class="observatorioHeader"></div>
+
+    </main>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Conocé Más</a>
+                <div class="dropdown-content">
+                  <a href="universo.html">Universo</a>
+                  <a href="galaxias.html">Galaxias</a>
+                  <a href="estrellas.html">Estrellas</a>
+                  <a href="agujerosNegros.html">Agujeros Negros</a>
+                </div>
+            </li>
+             <li><a href="galeriaFotos.html">Galeria de Fotos</a></li>
+             <li><a href="contacto.html">Contacto</a></li>
+
+        </ul>
+    </div>
+
+    <h1>Contáctanos</h1>
+
+    <form>
+        <fieldset>
+
+            <legend>Dejanos tu consulta</legend>
+
+            <div>
+                <label for="sexo">Sexo:</label>
+                <label for="genero">Mujer</label>
+                <input type="radio" name="genero" id="mujer">
+                <label for="genero">Varón</label>
+                <input type="radio" name="genero" id="varon">
+            </div>
+            <br>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required placeholder="Ingresá tu nombre aquí">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Ingresá tu correo electrónico">
+            </div>
+            <br>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" placeholder="Ingresá un número de contacto">
+            </div>
+            <br>
+            <div>
+                <label for="consulta">Motivo de Consulta:</label>
+                <select name="" id="">
+                    <option value="" selected disabled>Elige una opción</option>
+                    <option value="">Preguntar una duda</option>
+                    <option value="">Enviar un mensaje a la Luna</option>
+                    <option value="">Suscribirme a un curso o evento</option>
+                    <option value="">Nombrar una estrella</option>
+                    <option value="">Otro</option>
+                </select>
+            </div> 
+            <br>
+            <textarea placeholder="Contanos un poco más sobre tu consulta"></textarea>
+            <br>
+            <div>
+                <label for="opcion1">¿Desea recibir nuestro newsletter?</label>
+                <input type="checkbox" name="" id="">
+            </div>
+            <br>
+            <div>
+            <input type="reset" value="Limpar formulario">
+            <input type="submit" value="Enviar"> 
+            </div>
+
+        </fieldset>
+
+        
+    </form>
+
+    <div class="maps">
+        <h3>Observatorios en Argentina</h3>
+
+        <div class="dTigre">
+        <p id="pTigre">Partido de Tigre, Buenos Aires</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7649982106223!2d-64.20117378485193!3d-31.420600181402687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27e84ea72c5%3A0x4b2df0340a54c6dc!2sArgentine%20National%20Observatory!5e0!3m2!1sen!2sar!4v1648173405461!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="tigre"></iframe>
+        </div>
+        <div class="dCordoba">
+        <p id="pCordoba">Provincia de Córdoba</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7649982106223!2d-64.20117378485193!3d-31.420600181402687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27e84ea72c5%3A0x4b2df0340a54c6dc!2sArgentine%20National%20Observatory!5e0!3m2!1sen!2sar!4v1648173590642!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="cordoba"></iframe>
+        </div>
+        <div class="dSJ">
+        <p id="pSJ">Provincia de san Juan</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434026.47923619766!2d-69.60671426718751!3d-31.802331799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9686e98434dcabc7%3A0xbb1b9b73afd57206!2sF%C3%A9lix%20Aguilar%20Observatory!5e0!3m2!1sen!2sar!4v1648173661450!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="sanJuan"></iframe>
+        </div>
+        <div class="dMisiones">
+            <p id="pMisiones">Provincia de Misiones</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d908748.5449071134!2d-56.070498574648916!3d-27.162613571496387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457bda26d744b4f%3A0xdf70956eb20bffe0!2sObservatorio%20Astron%C3%B3mico%20de%20las%20Misiones!5e0!3m2!1sen!2sar!4v1648349806895!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="misiones"></iframe>
+        </div>
+    </div>
+
+    <footer>
+     
+        <p> &copy; Todos los derechos de autor reservados.</p>
+
+    </footer>
+</body>
+</html>
