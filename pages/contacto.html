@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300;1,400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -41,62 +42,77 @@
 
     <h1>Contáctanos</h1>
 
-    <form>
-        <fieldset>
 
-            <legend>Dejanos tu consulta</legend>
+    <form id="contact-form" method="post" action="contact.php" role="form">
 
-            <div>
-                <label for="sexo">Sexo:</label>
-                <label for="genero">Mujer</label>
-                <input type="radio" name="genero" id="mujer">
-                <label for="genero">Varón</label>
-                <input type="radio" name="genero" id="varon">
-            </div>
-            <br>
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required placeholder="Ingresá tu nombre aquí">
-            </div>
-            <br>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required placeholder="Ingresá tu correo electrónico">
-            </div>
-            <br>
-            <div>
-                <label for="telefono">Teléfono:</label>
-                <input type="number" id="telefono" placeholder="Ingresá un número de contacto">
-            </div>
-            <br>
-            <div>
-                <label for="consulta">Motivo de Consulta:</label>
-                <select name="" id="">
-                    <option value="" selected disabled>Elige una opción</option>
-                    <option value="">Preguntar una duda</option>
-                    <option value="">Enviar un mensaje a la Luna</option>
-                    <option value="">Suscribirme a un curso o evento</option>
-                    <option value="">Nombrar una estrella</option>
-                    <option value="">Otro</option>
-                </select>
-            </div> 
-            <br>
-            <textarea placeholder="Contanos un poco más sobre tu consulta"></textarea>
-            <br>
-            <div>
-                <label for="opcion1">¿Desea recibir nuestro newsletter?</label>
-                <input type="checkbox" name="" id="">
-            </div>
-            <br>
-            <div>
-            <input type="reset" value="Limpar formulario">
-            <input type="submit" value="Enviar"> 
-            </div>
+        <div class="messages"></div>
+    
+        <div class="controls">
 
-        </fieldset>
-
-        
+            <h4>Dejanos tu consulta</h4>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Nombre*</label>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Por favor, escribe aquí tu nombre*" required="required" data-error="Firstname is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_lastname">Apellido*</label>
+                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Por favor, escribe aquí tu apellido*" required="required" data-error="Lastname is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_email">Email*</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Por favor, escribe aquí tu email*" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_need">Motivo de Consulta*</label>
+                        <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                            <option value="" selected disabled>Elige una opción</option>
+                            <option value="">Preguntar una duda</option>
+                            <option value="">Enviar un mensaje a la Luna</option>
+                            <option value="">Suscribirme a un curso o evento</option>
+                            <option value="">Nombrar una estrella</option>
+                            <option value="">Otro</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="form_message">¿Tienes algún mensaje que quieras dejarnos?</label>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Deja aquí tu mensaje" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" class="btn btn-success btn-send" value="Enviar Mensaje">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <p class="text-muted">
+                        <strong>*</strong> Estos campos son obligatorios.
+                </div>
+            </div>
+        </div>
+    
     </form>
+
 
     <div class="maps">
         <h3>Observatorios en Argentina</h3>
@@ -109,6 +125,7 @@
         <p id="pCordoba">Provincia de Córdoba</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7649982106223!2d-64.20117378485193!3d-31.420600181402687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27e84ea72c5%3A0x4b2df0340a54c6dc!2sArgentine%20National%20Observatory!5e0!3m2!1sen!2sar!4v1648173590642!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="cordoba"></iframe>
         </div>
+        <br>
         <div class="dSJ">
         <p id="pSJ">Provincia de san Juan</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434026.47923619766!2d-69.60671426718751!3d-31.802331799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9686e98434dcabc7%3A0xbb1b9b73afd57206!2sF%C3%A9lix%20Aguilar%20Observatory!5e0!3m2!1sen!2sar!4v1648173661450!5m2!1sen!2sar" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="sanJuan"></iframe>
